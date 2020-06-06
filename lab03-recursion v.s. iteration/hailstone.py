@@ -52,34 +52,3 @@ def hailstone(n):
         return helper(total + 1, n)
     return helper(1, n)
     """
-
-
-def is_prime(n):
-    """Returns True if n is a prime number and False otherwise.
-
-    >>> is_prime(2)
-    True
-    >>> is_prime(16)
-    False
-    >>> is_prime(521)
-    True
-    """
-    #the i
-    """
-    x = n - 1
-    while x > 1:
-        if n % x == 0:
-            return False
-        else:
-            x = x - 1
-    return True
-    """
-
-    def check(x):
-        if x <= 1:
-            return True
-        elif n % x == 0:
-            return False
-        else:
-            return check(x - 1)
-    return check(n - 1)
