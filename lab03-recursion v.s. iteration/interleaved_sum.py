@@ -1,3 +1,11 @@
+"""
+Q9: Interleaved Sum
+Write a function interleaved_sum that similarly computes the sum of a sequence of terms from 1 to n, 
+but uses different functions to compute the terms for odd and even numbers. 
+Do so without using any loops or testing in any way if a number is odd or even. 
+(You may test if a number is equal to 0, 1, or n.)
+"""
+
 def interleaved_sum(n, odd_term, even_term):
     """Compute the sum odd_term(1) + even_term(2) + odd_term(3) + ..., up
     to n.
