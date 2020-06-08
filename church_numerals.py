@@ -25,10 +25,12 @@ addition, multiplication, and exponentiation on church numerals.
 
 def one(f):
     """Church numeral 1: same as successor(zero)"""
+    "*** YOUR CODE HERE ***"
     return lambda x: f(x)
 
 def two(f):
     """Church numeral 2: same as successor(successor(zero))"""
+    "*** YOUR CODE HERE ***"
     return lambda x: f(f(x))
 
 three = successor(two)
@@ -45,6 +47,7 @@ def church_to_int(n):
     >>> church_to_int(three)
     3
     """
+    "*** YOUR CODE HERE ***"
     # 自己的錯解
     """
     if n == zero:
@@ -75,6 +78,7 @@ def add_church(m, n):
     >>> church_to_int(add_church(two, three))
     5
     """
+    "*** YOUR CODE HERE ***"
     return lambda f: lambda x: m(f)(n(f)(x))
 
 def mul_church(m, n):
@@ -86,6 +90,7 @@ def mul_church(m, n):
     >>> church_to_int(mul_church(three, four))
     12
     """
+    "*** YOUR CODE HERE ***"
     return lambda f: lambda x: m(n(f))(x)
     #最优解： 不需要引入argument x
     #return lambda f: m(n(f))
@@ -98,6 +103,7 @@ def pow_church(m, n):
     >>> church_to_int(pow_church(three, two))
     9
     """
+    "*** YOUR CODE HERE ***"
     return lambda f: lambda x: n(m)(f)(x)
     #最优解： 不需要引入argument f和x
     #return n(m)
