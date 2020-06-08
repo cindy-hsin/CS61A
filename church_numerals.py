@@ -1,20 +1,25 @@
 """
 Q7: Church numerals
-The logician Alonzo Church invented a system of representing non-negative integers entirely using functions. The purpose was to show that functions are sufficient to describe all of number theory: if we have functions, we do not need to assume that numbers exist, but instead we can invent them.
+The logician Alonzo Church invented a system of representing non-negative integers entirely using functions. 
+The purpose was to show that functions are sufficient to describe all of number theory: 
+if we have functions, we do not need to assume that numbers exist, but instead we can invent them.
 
-Your goal in this problem is to rediscover this representation known as Church numerals. Here are the definitions of zero, as well as a function that returns one more than its argument:
-
+Your goal in this problem is to rediscover this representation known as Church numerals. 
+Here are the definitions of zero, as well as a function that returns one more than its argument:
+"""
 def zero(f):
     return lambda x: x
 
 def successor(n):
     return lambda f: lambda x: f(n(f)(x))
-
-First, define functions one and two such that they have the same behavior as successor(zero) and successsor(successor(zero)) respectively, but do not call successor in your implementation.
+"""
+First, define functions one and two such that they have the same behavior as successor(zero) and successsor(successor(zero)) respectively, 
+but do not call successor in your implementation.
 
 Next, implement a function church_to_int that converts a church numeral argument to a regular Python integer.
 
-Finally, implement functions add_church, mul_church, and pow_church that perform addition, multiplication, and exponentiation on church numerals.
+Finally, implement functions add_church, mul_church, and pow_church that perform 
+addition, multiplication, and exponentiation on church numerals.
 
 """
 
