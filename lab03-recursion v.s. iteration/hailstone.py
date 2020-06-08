@@ -1,3 +1,10 @@
+"""
+Q3: Hailstone
+For the hailstone function from homework 1, you pick a positive integer n as the start. 
+If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1. Repeat this process until n is 1. 
+Write a recursive version of hailstone that prints out the values of the sequence and returns the number of steps.
+"""
+
 def hailstone(n):
     """Print out the hailstone sequence starting at n, and return the
     number of elements in the sequence.
