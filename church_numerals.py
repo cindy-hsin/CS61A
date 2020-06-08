@@ -55,7 +55,7 @@ def church_to_int(n):
     else:
         integer = 1
         test = successor(zero)
-        while n(f)(x) != test(f)(x): #運行時Error: name 'f' is not defined
+        while test(f)(x) != n(f)(x): #運行時Error: name 'f' is not defined
             integer += 1
             test = successor(test)
         return integer
